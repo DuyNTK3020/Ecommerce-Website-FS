@@ -1,0 +1,70 @@
+@use "../abstracts";
+
+.hero {
+    background: var(--hero-bg);
+
+    &__inner {
+        height: calc(100vh - 110px);
+        display: flex;
+        gap: 50px;
+
+        @include abstracts.screen(xl) {
+            gap: 0px;
+            height: auto;
+        }
+
+        @include abstracts.screen(md) {
+            height: auto;
+        }
+    }
+
+    &__left {
+        margin: 100px 0;
+        flex: 1;
+        line-height: 1.1;
+
+        color: var(--sidebar-bg);
+
+        @include abstracts.screen(lg) {
+            margin: 80px 0;
+        }
+
+        @include abstracts.screen(md) {
+            margin: 60px 0;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        span {
+            margin-top: 50px;
+            display: inline-block;
+            font-size: 7rem;
+            font-weight: 700;
+
+            @include abstracts.screen(xl) {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+
+        img {
+            height: 100%;
+            @include abstracts.screen(xl) {
+                height: auto;
+                width: calc(100% + 40px);
+            }
+        }
+        @include abstracts.screen(md) {
+            display: none;
+        }
+    }
+}

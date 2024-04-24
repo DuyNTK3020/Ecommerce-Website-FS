@@ -1,0 +1,26 @@
+@use "../abstracts"; 
+
+html {
+    --text-color: #1A162E;
+    --icon-color: brightness(0) saturate(100%) invert(7%) sepia(36%) saturate(1536%) hue-rotate(217deg) brightness(94%) contrast(95%);
+
+    --body-bg: #F6F6F6;
+    --header-bg-color: #EEEEEE;
+    --top-act-group-bg-color: #FFFFFF;
+    --top-act-group-shadow: rgba(237, 237, 246, 0.20);
+    --top-act-group-separate: #EDEDF6;
+
+    @include abstracts.screen(lg) {
+        --header-bg-color: #FFF;
+    }
+
+    // Sidebar
+    --sidebar-bg: #fff;
+
+    // Hero
+    --hero-bg: linear-gradient(180deg, #77DAE6, #80D0C7 60%);
+
+    // Popular
+    --popular-item-bg: #FFF;
+    --popular-item-shadow: rgba(237, 237, 246, 0.20);
+}

@@ -1,0 +1,29 @@
+.btn {
+    display: inline-flex; 
+    align-items: center;
+
+    margin-top: 30px;
+    padding: 1.5rem 2rem;
+    border-radius: 30px;
+
+    font-size: 2rem;
+    color: #77DAE6;
+    background: var(--sidebar-bg);
+    transition: background-color 0.5s;
+
+    &:hover {
+        svg {
+            transform: translateX(0.6rem);
+        }
+    }
+
+    p {
+        font-weight: 500;
+    }
+
+    svg {
+        filter: brightness(0) saturate(100%) invert(92%) sepia(87%) saturate(2723%) hue-rotate(158deg) brightness(91%) contrast(98%);
+        margin-left: 1rem;
+        transition: 0.3s;
+    }
+}
